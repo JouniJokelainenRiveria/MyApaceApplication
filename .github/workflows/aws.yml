@@ -34,9 +34,7 @@ jobs:
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
-
-    - name: build deploy.zip and deploy to AWS
-          
+             
     - name: Create deploy.zip
       run: zip -r deploy.zip . -x '*.git*'
 
